@@ -1,0 +1,55 @@
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.outline-blue-500 {
+  outline: 2px solid #3b82f6;
+}
+
+body {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: radial-gradient(#1e242f, #2b3443);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+/* Mobile styles */
+@media (max-width: 767px) {
+  body {
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Desktop styles */
+@media (min-width: 768px) {
+  body {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+}
+
+h1 {
+  @apply text-3xl font-bold outline-blue-500;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  background-color: #ffffff;
+  z-index: 1;
+}
+
+section {
+  @apply text-3xl font-bold outline-blue-500;
+  margin-bottom: 10px;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+
+section.footer {
+  position: sticky;
+  bottom: 0;
+}
